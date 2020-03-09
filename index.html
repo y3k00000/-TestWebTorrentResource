@@ -13,9 +13,7 @@ client.add(magnet, async torrent => {
   // Got torrent metadata!
   console.log('Client is downloading:', torrent.infoHash);
   torrent.files.forEach(async file => {
-    // Display the file by appending it to the DOM. Supports video, audio, images, and
-    // more. Specify a container element (CSS selector or reference to DOM node).
-    console.log("file",file);
+    file.appendTo("body");
     alert(Object.keys(file));
   });
 })
