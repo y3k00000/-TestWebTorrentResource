@@ -8,7 +8,7 @@
 <script>
 var magnet = "magnet:?xt=urn:btih:0a732ea77424fec27fd98201d97a820bbf64e0f0&dn=ic_launcher.png&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com";
 var client = new WebTorrent();
-client.add(magnetURI, async torrent => {
+client.add(magnet, async torrent => {
   // Got torrent metadata!
   console.log('Client is downloading:', torrent.infoHash);
   torrent.files.forEach(async file => {
