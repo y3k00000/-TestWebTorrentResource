@@ -15,9 +15,14 @@ client.add(magnet, async torrent => {
     // file.appendTo("body");
     console.log(file);
     try{
-      file.appendTo(document.querySelector("#pictore"));
+      await new Promise((res,rej)=>{
+        file.getBlobURL((err, url) => {
+          if (err) ;
+          else document.querySelector("#pictore").src= url;
+        });
+      });
     } catch(e){
-      alert(e+"");
+      alert(e);
     }
   });
 })
