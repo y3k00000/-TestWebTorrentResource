@@ -13,6 +13,7 @@ client.add(magnet, async torrent => {
   console.log('Client is downloading:', torrent.infoHash);
   torrent.files.forEach(async file => {
     // file.appendTo("body");
+    console.log(file);
     try{
       file.appendTo(document.querySelector("#pictore"));
     } catch(e){
