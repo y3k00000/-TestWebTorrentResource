@@ -16,9 +16,13 @@ client.add(magnet, async torrent => {
     console.log(file);
     try{
       await new Promise((res,rej)=>{
-        file.getBlobURL((err, url) => {
-          if (err) ;
-          else document.querySelector("#pictore").src= url;
+        file.getBlobURL((err,url) => {
+          if (err) rej(err);
+          else {
+            document.querySelector("#pictore").src= url;
+            alert(url);
+            res(url);
+          }
         });
       });
     } catch(e){
