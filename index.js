@@ -1,5 +1,5 @@
-import * as WebTorrent from 'webtorrent';
 import "babel-polyfill";
+const WebTorrent = require('webtorrent');
 
 console.log(WebTorrent.WEBRTC_SUPPORT);
 
