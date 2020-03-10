@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "webtorrent": "^0.107.17"
+  },
+  "devDependencies": {
+    "create-torrent": "^4.4.1",
+    "parcel-bundler": "^1.12.4"
+  },
+  "scripts": {
+    "test": "parcel index.html",
+    "test-create": "create-torrent ./ic_launcher.png -o ./ic_launcher.torrent",
+    "build": "parcel build --public-url=. --out-dir docs index.html"
+  }
+}
